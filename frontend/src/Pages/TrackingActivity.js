@@ -4,16 +4,16 @@ import Footer from '../Components/Footer'
 import {useState} from 'react'
 import Sidebar from '../Components/Sidebar'
 function TrackingActivity() {
-  const[initialDate,setInitialDate]=useState('')
-  const[finalDate,setFinalDate]=useState('')
+  const[initialDate,setInitialDate]=useState()
+  const[finalDate,setFinalDate]=useState()
   function handleForm(e){
     e.preventDefault();
-    const daterecord={initialDate,finalDate};
-    console.log(daterecord)
+    const dateRecord={initialDate:new Date(initialDate),finalDate: new Date(finalDate)};
+    console.log(dateRecord)
     fetch('/api/trackdata',{
       method:'POST',
       headers:{ "Content-Type": "application/json" },
-      body:JSON.stringify(daterecord)
+      body:JSON.stringify(dateRecord)
     }).then((res)=>{
       return res.json()
     }).then((data)=>{

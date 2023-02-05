@@ -3,7 +3,6 @@ const Reg=require('../models/reg')
 const Food=require('../models/food')
 const Diary=require('../models/diary')
 const MyDiary=require('../models/mydiary');
-const mydiary = require('../models/mydiary');
 const Admin=require('../models/admin')
 router.get('/',async(req,res)=>{
     try {
@@ -124,13 +123,16 @@ router.get('/mydiary/:username',async(req,res)=>{
     res.json(record)
 })
 router.post('/trackdata',async(req,res)=>{
-    console.log(typeof(req.body.initialDate));
-    // const record=await MyDiary.find({"searchDate":{$gte:new Date(finalDate).toISOString(), $lt:new Date(initialDate).toISOString()}})
-    // console.log(record)
-//   const record= await MyDiary.find({searchDate:{$range:[initialDate,finalDate]}})
-//   const record= await MyDiary.findById('63a46585d25be67faa1e0ca3');
+    const initialDate = new Date(req.body.initialDate)
+    const finalDate = new Date(req.body.finalDate)
+    console.log(typeof(initialDate));
 
+    // const record=await MyDiary.find({"searchDate":{$gte:new Date(finalDate).toISOString(), $lt:new Date(initialDate).toISOString()}})
+//   const record= await MyDiary.find({searchDate:{$range:[initialDate,finalDate]}})
+  const record= await MyDiary.find({"createdAt" : { $gte : initialDate.toISOString() }});
+    // const record = MyDiary.find({$ne:{searchDate:null}});
 //   console.log(((year,month,day,0,0,0).toISOString(record.searchDate)))
+    console.log(record)
     
 
 })
