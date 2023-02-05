@@ -1,0 +1,26 @@
+###
+GET http://localhost:5000/api
+
+###
+POST http://localhost:5000/api/food
+Content-Type: application/json
+
+{
+    "foodname":"fruit salad",
+    "protein":0.41,
+    "carbohydrate":22.4,
+    "fat":0.1,
+    "vitaminA":6,
+    "vitaminB12":0.4,
+    "vitaminC":17.5,
+    "calcium":13,
+    "iron":0.52,
+    "fiber":1.3,
+    "energy":360
+}
+
+###
+GET http://localhost:5000/api/food
+
+###
+DELETE http://localhost:5000/api/food/6392a985d8403a48eb397dad

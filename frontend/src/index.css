@@ -1,0 +1,166 @@
+/* Header and navbar Css */
+#header{
+    display: flex;
+    align-items: baseline;
+    
+}
+
+/* Registration page css */
+#reg{
+    display: flex;
+    margin-top: 30px;
+    height: 500px;
+}
+#reg .row{
+    height: 100%;
+    align-items: center;
+}
+
+/* Login page css */
+#login{
+    display: flex;
+    height: 500px;
+    margin-top: 30px;
+}
+#login .row{
+    height: 100%;
+    align-items: center;
+}
+
+/* Hero sectio  */
+#hero img{
+    height: 550px;
+}
+
+#testi{
+    padding: 20px 0px;
+  }
+  #testi img{
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 13px;
+  }
+#userdashborad{
+    margin-bottom: 315px;
+}
+/* #footer{
+    margin-top: 100px;
+} */
+#nutrisearch{
+    margin-bottom: 99px;
+}
+#myDiary{
+    margin-bottom: 275px;
+}
+#tracking{
+    margin-bottom: 315px;
+}
+/* #myDiary{
+    margin-bottom: 315px;
+} */
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+.containers{
+    display:flex;
+}
+main{
+    width: 100%;
+    padding: 20px;
+}
+.sidebar{
+    background: rgb(248, 247, 247);
+    color: rgb(12, 12, 12);
+    height: 100vh;
+    width: 200px;
+    transition: all 0.5s;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+}
+.logo{
+    font-size: 30px;
+}
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.link{
+    display: flex;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.link:hover{
+    background:lightskyblue;
+    color: #000;
+    transition: all 0.5s;
+}
+.active{
+    background: lightskyblue;
+    color: #000;
+}
+.icon, .link_text{
+    font-size: 20px;
+}
+.parent-div {
+    display: flex;
+}
+
+form-div{
+    display: flex;
+    /* margin-top: 50px;
+    margin-left: 50px; */
+    /* padding: 30px; */
+    
+}
+/* .contents-div{
+    display: flex;
+    flex-wrap: wrap;
+
+} */
+
+/* .img-div{
+    flex-basis: 40%
+} */
+.img-div,img{
+    max-width: 100% 
+}
+.contents-div p{
+    display: flex;
+}
+.text{
+    
+    font-size: 20px;
+  padding-left: 20px;
+  
+}
+
+
+.show-content{
+    position: relative;
+    
+    right: 2%;
+    
+}
+.diary-div{
+    position: absolute;
+    left: 14%;
+    width: 79%;
+    padding: 10px;
+    margin-right: 20px;
+    
+}
+
+@media screen and (max-width : 550px) {
+    form-div{
+        flex-direction: column;
+    }
+}
