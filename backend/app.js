@@ -1,11 +1,13 @@
+const mongoose=require('mongoose')
 const express=require('express')
 const app=express()
+const connectDb = require('./config/db')
+connectDb()
 app.use(express.json())
 const apiRouter=require('./router/api')
-const mongoose=require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/foodassistant',()=>{
-    console.log('Connect to database')
-})
+// mongoose.connect('mongodb://127.0.0.1:27017/foodassistant',()=>{
+//     console.log('Connect to database')
+// })
 
 
 

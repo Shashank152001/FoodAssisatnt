@@ -124,9 +124,9 @@ router.get('/mydiary/:username',async(req,res)=>{
     res.json(record)
 })
 router.post('/trackdata',async(req,res)=>{
-    const {initialDate,finalDate}=req.body;
-    const record=await MyDiary.find({"searchDate":{$gte:new Date(finalDate).toISOString(), $lt:new Date(initialDate).toISOString()}})
-    console.log(record)
+    console.log(typeof(req.body.initialDate));
+    // const record=await MyDiary.find({"searchDate":{$gte:new Date(finalDate).toISOString(), $lt:new Date(initialDate).toISOString()}})
+    // console.log(record)
 //   const record= await MyDiary.find({searchDate:{$range:[initialDate,finalDate]}})
 //   const record= await MyDiary.findById('63a46585d25be67faa1e0ca3');
 
